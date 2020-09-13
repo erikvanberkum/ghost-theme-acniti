@@ -1,0 +1,61 @@
+{{!< default}}
+{{#post}}
+  {{#has tag="#es"}}
+    {{#contentFor "lang"}}es{{/contentFor}}
+  {{else}}
+    {{#contentFor "lang"}}{{@site.lang}}{{/contentFor}}
+  {{/has}}
+{{/post}}
+              
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{#post}}
+{{!-- Everything inside the #post tags pulls data from the post --}}
+<section>
+
+    <header class="main content">
+        <h1>{{title}}</h1>
+        {{#if custom_excerpt}}
+            <p class="content">{{custom_excerpt}}</p>
+        {{/if}}
+    </header>
+
+    {{#if feature_image}}
+    <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
+    {{/if}}
+
+    <div class="content">
+        {{content}}
+    </div>
+
+    {{!-- Email subscribe form at the bottom of the page --}}
+    {{#if @labs.subscribers}}
+    <section class="subscribe-form">
+        <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
+        <p>Get the latest posts delivered right to your inbox</p>
+        {{subscribe_form placeholder="youremail@example.com"}}
+    </section>
+    {{/if}}
+
+   
+
+    {{!--
+    <section class="post-full-comments">
+        If you want to embed comments, this is a good place to do it!
+    </section>
+    --}}
+
+</section>
+{{/post}}
+
+<script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function (image) {
+        var container = image.closest('.kg-gallery-image');
+        var width = image.attributes.width.value;
+        var height = image.attributes.height.value;
+        var ratio = width / height;
+        container.style.flex = ratio + ' 1 0%';
+    })
+</script>

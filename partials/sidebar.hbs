@@ -1,0 +1,47 @@
+<div id="sidebar">
+    <div class="inner">
+
+        {{!-- Nav - partials/navigation.hbs --}}
+        {{#if @site.navigation}}
+            {{navigation}}
+        {{/if}}
+
+        {{!-- Recent posts --}}
+        <section>
+            <header class="major">
+                <h2>Contact Us</h2>
+            </header>
+            <div class="mini-posts">
+                    <article>
+                        <h3>acniti LLC</h3>
+                        <p>1-2-9 Nyoidani<br>
+                        Minoh Osaka<br>
+                        〒562-0011<br>
+                        Japan<br>
+                        <br>
+                   	 <a href="mailto: h2@acniti.com">h2@acniti.com</a><br>
+					 <a href="https//:www.acniti.com">www.acniti.com</a></p>
+                    </article>
+            </div>
+        </section>
+
+        {{!-- Contact --}}
+        {{#get "posts" slug="contact"as |contact|}}
+            {{#if contact}}{{#foreach contact}}
+                <section>
+                    <header class="major">
+                        <h2>{{title}}</h2>
+                    </header>
+                    {{content}}
+                </section>
+            {{/foreach}}{{/if}}
+        {{/get}}
+
+        {{!-- Footer --}}
+        <footer id="footer">
+            <p class="copyright">&copy; {{@site.title}} LLC - All rights reserved<br>
+            Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
