@@ -1,8 +1,8 @@
 {
-    "name": "editorial",
-    "description": "This is Editorial, a news-oriented theme for Ghost.",
-    "demo": "https://editorial.ghost.io",
-    "version": "2.0.0",
+    "name": "acniti",
+    "description": "This is Acniti, a product promotion orientated theme for Ghost based on editorial.",
+    "demo": "https://h2.acniti.com",
+    "version": "3.0.0",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
@@ -29,7 +29,8 @@
         "type": "theme",
         "categories": [
             "Minimal",
-            "Magazine"
+            "Magazine",
+            "Product"
         ]
     },
     "keywords": [
@@ -39,7 +40,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Editorial.git"
+        "url": "https://github.com/erikvanberkum/ghost-theme-acniti.git"
     },
     "bugs": "https://github.com/TryGhost/Editorial/issues",
     "contributors": [
@@ -47,6 +48,11 @@
             "name": "ajlkn",
             "email": "aj@lkn.io",
             "url": "https://twitter.com/ajlkn"
+        },
+        {
+            "name": "erikvanberkum",
+            "email": "bubble@acniti.com",
+            "url": "https://www.acniti.com"
         }
     ],
     "devDependencies": {
@@ -56,9 +62,11 @@
         "gulp-livereload": "^4.0.2",
         "gulp-sass": "4.1.0",
         "gulp-sourcemaps": "2.6.5",
+        "gulp-uglify": "^3.0.2",
         "gulp-watch": "5.0.1",
         "gulp-zip": "5.0.2",
-        "node-sass": "4.14.1"
+        "node-sass": "4.14.1",
+        "pump": "^3.0.0"
     },
     "config": {
         "posts_per_page": 6
