@@ -36,13 +36,15 @@ taxonomies:
   
 ```
 
+further you need to label every post and page with a language tage which is in this case #nl, #en, #es. For Dutch, English and Spanish
+
 
 
 
 
 &nbsp;
 
-![screenshot](https://user-images.githubusercontent.com/120485/49328081-0e192680-f59d-11e8-808a-e6d6bcfa8419.png)
+![screenshot](https://user-images.githubusercontent.com/120485/49328081-0e192680-f59d-11e8-808a-e6d6bcfa8419x.png)
 
 
 &nbsp;
