@@ -6,6 +6,37 @@ Ghost theme acniti is based on a modified verion of the Editorial theme, a news-
 - Demo original sitte: https://editorial.ghost.io
 
 
+# multi language
+
+To make a ghost site work in multi language the routes.yaml file needs to be modified
+This file is located in: content / settings / routes.yaml
+
+paste the following or modify if other languages required
+
+```
+routes:
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+    filter: 'tag:-[hash-nl,hash-es]'
+  /nl/:
+    permalink: /nl/{slug}/
+    template: index-nl
+    filter: 'tag:hash-nl'
+  /es/:
+    permalink: /es/{slug}/
+    template: index-es
+    filter: 'tag:hash-es'
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
+  
+```
+
+
 
 
 
