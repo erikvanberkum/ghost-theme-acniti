@@ -1,8 +1,13 @@
-# Editorial
+# Ghost the Acniti
 
-This is Editorial, a news-oriented design built around a dynamic 'locking' sidebar (try the toggle to see it in action!) and purpose built for content-centric sites. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
+Ghost theme acniti is based on a modified verion of the Editorial theme, a news-oriented design built around a dynamic 'locking' sidebar (try the toggle to see it in action!) and purpose built for content-centric sites. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
 
-**Demo: https://editorial.ghost.io**
+**Demo of the Ghost acniti theme https://h2.acniti.com***
+Demo original sitte: https://editorial.ghost.io
+
+
+
+
 
 &nbsp;
 
@@ -20,7 +25,9 @@ We've documented our default theme pretty heavily so that it should be fairly ea
 **The main files are:**
 
 - `default.hbs` - The main template file
-- `index.hbs` - Used for the home page
+- `index.hbs` - Used for the English home page
+- `index-nl.hbs` - Used for the Dutch home page
+- `index-es.hbs` - Used for the Spanish home page
 - `post.hbs` - Used for individual posts
 - `page.hbs` - Used for individual pages
 - `tag.hbs` - Used for tag archives
@@ -32,30 +39,6 @@ One neat trick is that you can also create custom one-off templates just by addi
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
 - `author-ali.hbs` - Custom template for `/author/ali/` archive
 
-
-# Development
-
-This implementation tries to stay as true as possible to the original template without making too many modifications. The original code is unmodified, preserving the ability to update it later.
-
-There are two main changes compared to the original template files:
-
-- The original template contained separate `/assets` and `/images` directories. Ghost Themes require that all assets be nested under a top-level `/assets` directory, so these are moved to `/assets/main` and `/assets/images`, respectively.
-- In order to make minor modifications and add some new custom styles, one additional SaSS file is added under `/assets/main/sass/layout/ghost.sass` and included at the bottom of the `main.sass` file.
-
-To work on styles in this theme, you'll need to run a local development environment to build/watch for changes. Once cloned and installed with npm/yarn, the following `gulp` build tasks are available:
-
-```bash
-# Build files locally and watch for changes
-gulp
-
-# Build production zip locally and save to /dist
-gulp zip
-
-# Run compatibility test against latest version of Ghost
-yarn test
-```
-
-Original template files and design by [@ajlkn](https://twitter.com/ajlkn)
 
 
 # Copyright & License
