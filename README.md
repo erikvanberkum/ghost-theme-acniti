@@ -38,6 +38,9 @@ taxonomies:
 
 further you need to label every post and page with a language tage which is in this case #nl, #en, #es. For Dutch, English and Spanish
 
+for more detailed instructions read the following tutorial:
+https://ghost.org/tutorials/multi-language-content/
+
 
 
 
