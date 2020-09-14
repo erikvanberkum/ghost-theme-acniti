@@ -1,4 +1,4 @@
-# Ghost theme Acniti
+# ghost theme acniti
 
 Ghost theme acniti is based on a modified verion of the Editorial theme, a news-oriented design built around a dynamic 'locking' sidebar (try the toggle to see it in action!) and purpose built for content-centric sites. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
 
@@ -9,7 +9,7 @@ Ghost theme acniti is based on a modified verion of the Editorial theme, a news-
 # multi language
 
 To make a ghost site work in multi language the routes.yaml file needs to be modified
-This file is located in: content / settings / routes.yaml
+The file located in: content / settings / routes.yaml
 
 paste the following or modify if other languages required
 

@@ -2,11 +2,13 @@
 {{#post}}
   {{#has tag="#es"}}
     {{#contentFor "lang"}}es{{/contentFor}}
+  {{else has tag="#nl"}}
+    {{#contentFor "lang"}}nl{{/contentFor}}
   {{else}}
     {{#contentFor "lang"}}{{@site.lang}}{{/contentFor}}
   {{/has}}
 {{/post}}
-              
+
 {{#post}}
 {{!-- Everything inside the #post tags pulls data from the page --}}
 

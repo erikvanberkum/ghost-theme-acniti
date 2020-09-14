@@ -1,12 +1,28 @@
 <div id="sidebar">
     <div class="inner">
 
-        {{!-- Nav - partials/navigation.hbs --}}
-        {{#if @site.navigation}}
-            {{navigation}}
-        {{/if}}
+        {{!-- Contact Acniti --}}
+        <nav id="menu">
+            <header class="major">
+                <h2>menu.es</h2>
+            </header>
+            <ul class="links">
+                <li class="nav-{{slug}}"><a href="{{site.url}}/es/respiro-cubic-terapia-de-hidrogeno/">Sedis</a></li>
+                <li class="nav-{{slug}}"><a href="{{site.url}}/es/dispensador-de-agua-hidrogeno-sedis/">Respiro 1</a></li>
+                <li class="nav-{{slug}}"><a href="{{site.url}}/es/dispensador-de-agua-de-hidrogeno-sedis/">Respiro 2</a></li>
+                <li class="nav-{{slug}}"><a href="{{site.url}}/es/h2-servidor-de-agua-magna/">Magna servidor de hidrogeno</a></li>
+                <li class="nav-{{slug}}"><a href="{{site.url}}/sobre-nosotros/">sobre nostros</a></li>
+                <li class="nav-{{slug}}"><a href="{{site.url}}/precios/">precios</a></li>
+                <li class="nav-{{slug}}"><a href="{{@site.url}}/es/">es</a></li>
+                <li class="nav-{{slug}}"><a href="{{@site.url}}/nl/">nl</a></li>
+            </ul>
+        </nav>
 
-        {{!-- Recent posts --}}
+
+
+
+
+        {{!-- Contact Acniti --}}
         <section>
             <header class="major">
                 <h2>Contact Us</h2>
@@ -39,7 +55,7 @@
 
         {{!-- Footer --}}
         <footer id="footer">
-            <p class="copyright">&copy; {{@site.title}} LLC - All rights reserved<br>
+            <p class="copyright 2017-2020">&copy; {{@site.title}} LLC - todos los derechos reservados<br>
             Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></p>
         </footer>
 

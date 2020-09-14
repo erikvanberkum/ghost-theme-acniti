@@ -46,10 +46,40 @@
             </div>
         </main>
 
-        {{!-- The left sidebar - partials/sidebar.hbs --}}
-        {{> sidebar}}
 
-    </div>
+        {{#is "post"}}
+        {{!-- The left sidebar - partials/sidebar.hbs --}}
+            {{#post}}
+                {{#has tag="#es"}}
+                    {{> sidebar-es}}
+                {{/has}}
+                {{#has tag="#nl"}}
+                    {{> sidebar-nl}}
+                {{/has}}
+                {{#has tag="#en"}}
+                    {{> sidebar}}
+                {{/has}}
+            {{/post}}
+        {{/is}}
+        {{^is "post"}}
+            {{#has block "index-lang"}}
+                {{> navigation}}
+            {{/has}}
+
+            {{#has block "index-es"}}
+                {{> navigation-es}}
+            {{/has}}
+
+            {{#has block "index-nl"}}
+                {{> navigation-ml}}
+            {{/has}}
+
+
+        {{/is}}
+
+
+
+           </div>
 
     {{!-- Theme Scripts --}}
     <script src="{{asset "main/js/jquery.min.js"}}"></script>
