@@ -32,14 +32,8 @@
                     <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
                 {{/if}}
                 <ul class="icons">
-                    {{#if @site.twitter}}
-                        <li><a href="{{twitter_url @site.twitter}}" class="icon fa-twitter" title="Twitter"><span
-                                class="label">Twitter</span></a></li>
-                    {{/if}}
-                    <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" title="Buy"><span class="label">Buy</span></a>
+                    <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" target="_blank" title="Kopen"><span class="label">Kopen</span></a>
                     </li>
-                    <li><a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" class="icon fa-rss"
-                           target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a></li>
                 </ul>
             </header>
 
@@ -109,8 +103,6 @@
                         waterstofdispenser</a></li>
                     <li class="nav-{{slug}}"><a href="{{@site.url}}/over-ons/">over ons</a></li>
                     <li class="nav-{{slug}}"><a href="{{@site.url}}/prijzen/">prijzen</a></li>
-                    <li class="nav-{{slug}}"><a href="{{@site.url}}/es/">es</a></li>
-                    <li class="nav-{{slug}}"><a href="{{@site.url}}/">en</a></li>
                 </ul>
             </nav>
 
@@ -121,7 +113,7 @@
                 </header>
                 <div class="mini-posts">
                     <article>
-                        <h3>acniti LLC Netherlands</h3>
+                        <h3>acniti LLC</h3>
                         <p>1-2-9 Nyoidani<br>
                             Minoh Osaka<br>
                             〒562-0011<br>
@@ -147,8 +139,19 @@
 
             {{!-- Footer --}}
             <footer id="footer">
-                <p class="copyright 2017-2020">&copy; {{@site.title}} LLC - Alle rechten voorbehouden<br>
-                    Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></p>
+                    <ul class="icons">
+                        {{#if @site.twitter}}
+                            <li><a href="{{twitter_url @site.twitter}}" class="icon fa-twitter" title="Twitter"><span
+                                    class="label">Twitter</span></a></li>
+                        {{/if}}
+                        <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" title="Buy"><span class="label">Buy</span></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/company/acniti/" class="icon fa-linkedin" title="acniti linkedin"><span class="label">linkedin</span></a>
+                        <li><a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" class="icon fa-rss"
+                               target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a></li>
+                    </ul>
+                <p class="copyright">&copy; {{@site.title}} LLC - Alle rechten voorbehouden</p>
+                <p class="design">Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></p>
             </footer>
 
         </div>
@@ -157,11 +160,11 @@
 
 
 {{!-- Theme Scripts --}}
-<script src="{{asset "main/js/jquery.min.js"}}"></script>
-<script src="{{asset "main/js/browser.min.js"}}"></script>
-<script src="{{asset "main/js/breakpoints.min.js"}}"></script>
-<script src="{{asset "main/js/util.js"}}"></script>
-<script src="{{asset "main/js/main.js"}}"></script>
+<script src="https://s3.acniti.com/h2/assets/main/js/jquery.min.js"></script>
+<script src="https://s3.acniti.com/h2/assets/main/js/browser.min.js"></script>
+<script src="https://s3.acniti.com/h2/assets/main/js/breakpoints.min.js"></script>
+<script src="https://s3.acniti.com/h2/assets/main/js/util.js"></script>
+<script src="https://s3.acniti.com/h2/assets/main/js/main.js"></script>
 
 {{!-- Ghost outputs important scripts & data with the {ghost_foot} tag
 it should always be the very last thing before the closing body tag --}}
