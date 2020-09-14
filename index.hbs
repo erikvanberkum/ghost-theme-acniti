@@ -1,60 +1,192 @@
-{{!< default}}
-{{#contentFor "lang"}}{{@site.lang}}{{/contentFor}}
-{{#contentFor "index-lang"}} navigation {{/contentFor}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-{{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "main/css/main.css"}}"/>
 
-{{!-- Featured Post --}}
-{{#is "home"}}
-{{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
-    {{#foreach featured_post}}
-        <article id="banner">
-            <div class="content">
-                <header>
-                    <h1><a href="{{url}}">{{title}}</a></h1>
-                    {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
-                </header>
-                {{content words="42"}}
-                <ul class="actions">
-                    <li><a href="{{url}}" class="button big">Learn More</a></li>
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+<body class="is-preload {{body_class}}">
+
+<div id="wrapper">
+    <main id="main">
+        <div class="inner">
+
+            {{!-- Header --}}
+            <header id="header">
+                {{#if @site.logo}}
+                    <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}"/></a>
+                {{else}}
+                    <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
+                {{/if}}
+                <ul class="icons">
+                    {{#if @site.twitter}}
+                        <li><a href="{{twitter_url @site.twitter}}" class="icon fa-twitter" title="Twitter"><span
+                                class="label">Twitter</span></a></li>
+                    {{/if}}
+                    <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" title="Buy"><span class="label">Buy</span></a>
+                    </li>
+                    <li><a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" class="icon fa-rss"
+                           target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a></li>
                 </ul>
-            </div>
-            {{#if feature_image}}
-            <a href="{{url}}" class="image object">
-                <img src="{{img_url feature_image}}" alt="{{title}}" />
-            </a>
-            {{/if}}
-        </article>
-    {{/foreach}}
-{{/get}}
-{{/is}}
+            </header>
 
-{{!-- Posts --}}
-<section>
+            {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+            {{!-- Featured Post --}}
+            {{#is "home"}}
+                {{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
+                    {{#foreach featured_post}}
+                        <article id="banner">
+                            <div class="content">
+                                <header>
+                                    <h1><a href="{{url}}">{{title}}</a></h1>
+                                    {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
+                                </header>
+                                {{content words="42"}}
+                                <ul class="actions">
+                                    <li><a href="{{url}}" class="button big">Learn More</a></li>
+                                </ul>
+                            </div>
+                            {{#if feature_image}}
+                                <a href="{{url}}" class="image object">
+                                    <img src="{{img_url feature_image}}" alt="{{title}}"/>
+                                </a>
+                            {{/if}}
+                        </article>
+                    {{/foreach}}
+                {{/get}}
+            {{/is}}
 
-    <header class="major">
-        <h2>Products</h2>
-    </header>
+            {{!-- Posts --}}
+            <section>
 
-    <section class="posts">
-        {{#foreach posts}}
-        <article>
-            {{#if feature_image}}
-            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-            {{/if}}
-            <h3><a href="{{url}}">{{title}}</a></h3>
-            <p>{{excerpt words="33"}}</p>
-            <ul class="actions special">
-                <li><a href="{{url}}" class="button">More</a></li>
-            </ul>
-        </article>
-        {{/foreach}}
-    </section>
+                <header class="major">
+                    <h2>Products</h2>
+                </header>
 
-</section>
+                <section class="posts">
+                    {{#foreach posts}}
+                        <article>
+                            {{#if feature_image}}
+                                <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}"
+                                                                         alt="{{title}}"/></a>
+                            {{/if}}
+                            <h3><a href="{{url}}">{{title}}</a></h3>
+                            <p>{{excerpt words="33"}}</p>
+                            <ul class="actions special">
+                                <li><a href="{{url}}" class="button">More</a></li>
+                            </ul>
+                        </article>
+                    {{/foreach}}
+                </section>
 
-{{!-- Pagination --}}
-{{pagination}}
+            </section>
+
+
+        </div>
+    </main>
+
+    <div id="sidebar">
+        <div class="inner">
+
+            <nav id="menu">
+                <header class="major">
+                    <h2>menu</h2>
+                </header>
+                <ul class="links">
+                    <li class="nav-{{slug}}"><a href="{{@site.url}}/">Home</a></li>
+                    <li class="nav-{{slug}}"><a href="{{@site.url}}/respiro-cubic-h2-inhaler/">Respiro</a></li>
+                    <li class="nav-{{slug}}"><a href="{{@site.url}}/sedis-h2-hydrogen-water-dispenser/">Sedis</a></li>
+                    <li class="nav-{{slug}}"><a href="{{@site.url}}/sedis-respiro-h2-hydrogen-water-dispenser/">Sedis
+                        Respiro</a></li>
+                    <li class="nav-{{slug}}"><a href="{{@site.url}}">Magna servidor de hidrogeno</a></li>
+                    <li class="nav-{{slug}}"><a href="{{@site.url}}">sobre nostros</a></li>
+                    <li class="nav-{{slug}}"><a href="{{@site.url}}">precios</a></li>
+                    <li class="nav-{{slug}}"><a href="{{@site.url}}/es/">es</a></li>
+                    <li class="nav-{{slug}}"><a href="{{@site.url}}/nl/">nl</a></li>
+                </ul>
+            </nav>
+
+            {{!-- Contact --}}
+            <section>
+                <header class="major">
+                    <h2>Contact Us</h2>
+                </header>
+                <div class="mini-posts">
+                    <article>
+                        <h3>acniti LLC</h3>
+                        <p>1-2-9 Nyoidani<br>
+                            Minoh Osaka<br>
+                            〒562-0011<br>
+                            Japan<br>
+                            <br>
+                            <a href="mailto: h2@acniti.com">h2@acniti.com</a><br>
+                            <a href="https://www.acniti.com">www.acniti.com</a></p>
+                    </article>
+                </div>
+            </section>
+
+            {{!-- Contact --}}
+            {{#get "posts" slug="contact"as |contact|}}
+                {{#if contact}}{{#foreach contact}}
+                    <section>
+                        <header class="major">
+                            <h2>{{title}}</h2>
+                        </header>
+                        {{content}}
+                    </section>
+                {{/foreach}}{{/if}}
+            {{/get}}
+
+            {{!-- Footer --}}
+            <footer id="footer">
+                <p class="copyright 2017-2020">&copy; {{@site.title}} LLC - All rights reserved<br>
+                    Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></p>
+            </footer>
+
+        </div>
+    </div>
+
+    {{#is "post"}}
+    {{!-- The left sidebar - partials/sidebar.hbs --}}
+        {{#post}}
+            {{#has tag="#es"}}
+                {{> sidebar-es}}
+            {{/has}}
+            {{#has tag="#nl"}}
+                {{> sidebar-nl}}
+            {{/has}}
+            {{#has tag="#en"}}
+                {{> sidebar}}
+            {{/has}}
+        {{/post}}
+    {{/is}}
+
+
+</div>
+
+{{!-- Theme Scripts --}}
+<script src="{{asset "main/js/jquery.min.js"}}"></script>
+<script src="{{asset "main/js/browser.min.js"}}"></script>
+<script src="{{asset "main/js/breakpoints.min.js"}}"></script>
+<script src="{{asset "main/js/util.js"}}"></script>
+<script src="{{asset "main/js/main.js"}}"></script>
+
+{{!-- Ghost outputs important scripts & data with the {ghost_foot} tag
+it should always be the very last thing before the closing body tag --}}
+{{ghost_foot}}
+
+</body>
+</html>
 

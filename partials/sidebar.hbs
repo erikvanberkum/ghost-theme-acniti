@@ -1,13 +1,22 @@
 <div id="sidebar">
     <div class="inner">
 
-        {{!-- Nav - partials/navigation.hbs --}}
-        {{#if @site.navigation}}
-            {{navigation}}
-        {{/if}}
-
-
-
+        <nav id="menu">
+            <header class="major">
+                <h2>menu</h2>
+            </header>
+            <ul class="links">
+                <li class="nav-{{slug}}"><a href="{{@site.url}}/">Home</a></li>
+                <li class="nav-{{slug}}"><a href="{{@site.url}}/respiro-cubic-h2-inhaler/">Respiro</a></li>
+                <li class="nav-{{slug}}"><a href="{{@site.url}}/sedis-h2-hydrogen-water-dispenser/">Sedis</a></li>
+                <li class="nav-{{slug}}"><a href="{{@site.url}}/sedis-respiro-h2-hydrogen-water-dispenser/">Sedis Respiro</a></li>
+                <li class="nav-{{slug}}"><a href="{{@site.url}}">Magna servidor de hidrogeno</a></li>
+                <li class="nav-{{slug}}"><a href="{{@site.url}}">sobre nostros</a></li>
+                <li class="nav-{{slug}}"><a href="{{@site.url}}">precios</a></li>
+                <li class="nav-{{slug}}"><a href="{{@site.url}}/es/">es</a></li>
+                <li class="nav-{{slug}}"><a href="{{@site.url}}/nl/">nl</a></li>
+            </ul>
+        </nav>
 
         {{!-- Recent posts --}}
         <section>
@@ -23,7 +32,7 @@
                         Japan<br>
                         <br>
                    	 <a href="mailto: h2@acniti.com">h2@acniti.com</a><br>
-					 <a href="https//:www.acniti.com">www.acniti.com</a></p>
+					 <a href="https://www.acniti.com">www.acniti.com</a></p>
                     </article>
             </div>
         </section>
@@ -42,7 +51,7 @@
 
         {{!-- Footer --}}
         <footer id="footer">
-            <p class="copyright">&copy; {{@site.title}} LLC - All rights reserved<br>
+            <p class="copyright 2017-2020">&copy; {{@site.title}} LLC - All rights reserved<br>
             Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></p>
         </footer>
 
