@@ -27,16 +27,13 @@
                 {{!-- Header --}}
                 <header id="header">
                     {{#if @site.logo}}
-                        <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+                        <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}"/></a>
                     {{else}}
                         <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
                     {{/if}}
                     <ul class="icons">
-                        {{#if @site.twitter}}
-                            <li><a href="{{twitter_url @site.twitter}}" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
-                        {{/if}}
-                        <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" title="Buy"><span class="label">Buy</span></a></li>
-                        <li><a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" class="icon fa-rss" target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a></li>
+                        <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" target="_blank" title="Buy"><span class="label">Buy</span></a>
+                        </li>
                     </ul>
                 </header>
 
@@ -66,11 +63,12 @@
 </div>
 
     {{!-- Theme Scripts --}}
-    <script src="{{asset "main/js/jquery.min.js"}}"></script>
-    <script src="{{asset "main/js/browser.min.js"}}"></script>
-    <script src="{{asset "main/js/breakpoints.min.js"}}"></script>
-    <script src="{{asset "main/js/util.js"}}"></script>
-    <script src="{{asset "main/js/main.js"}}"></script>
+    <script src="https://s3.acniti.com/h2/assets/main/js/jquery.min.js"></script>
+    <script src="https://s3.acniti.com/h2/assets/main/js/browser.min.js"></script>
+    <script src="https://s3.acniti.com/h2/assets/main/js/breakpoints.min.js"></script>
+    <script src="https://s3.acniti.com/h2/assets/main/js/util.js"></script>
+    <script src="https://s3.acniti.com/h2/assets/main/js/main.js"></script>
+
 
     {{!-- Ghost outputs important scripts & data with the {ghost_foot} tag
     it should always be the very last thing before the closing body tag --}}
