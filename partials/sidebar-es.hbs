@@ -13,8 +13,6 @@
                 <li class="nav-{{slug}}"><a href="{{@site.url}}/es/h2-servidor-de-agua-magna/">Magna servidor de hidrogeno</a></li>
                 <li class="nav-{{slug}}"><a href="{{@site.url}}/sobre-nosotros/">sobre nostros</a></li>
                 <li class="nav-{{slug}}"><a href="{{@site.url}}/precios/">precios</a></li>
-                <li class="nav-{{slug}}"><a href="{{@site.url}}/nl/">nl</a></li>
-                <li class="nav-{{slug}}"><a href="{{@site.url}}/">en</a></li>
             </ul>
         </nav>
 
@@ -25,7 +23,7 @@
             </header>
             <div class="mini-posts">
                     <article>
-                        <h3>acniti LLC Spain</h3>
+                        <h3>acniti LLC</h3>
                         <p>1-2-9 Nyoidani<br>
                         Minoh Osaka<br>
                         〒562-0011<br>
@@ -37,22 +35,21 @@
             </div>
         </section>
 
-        {{!-- Contact --}}
-        {{#get "posts" slug="contact"as |contact|}}
-            {{#if contact}}{{#foreach contact}}
-                <section>
-                    <header class="major">
-                        <h2>{{title}}</h2>
-                    </header>
-                    {{content}}
-                </section>
-            {{/foreach}}{{/if}}
-        {{/get}}
-
         {{!-- Footer --}}
         <footer id="footer">
-            <p class="copyright 2017-2020">&copy; {{@site.title}} LLC - todos los derechos reservados<br>
-            Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></p>
+            <ul class="icons">
+                {{#if @site.twitter}}
+                    <li><a href="{{twitter_url @site.twitter}}" class="icon fa-twitter" title="Twitter"><span
+                            class="label">Twitter</span></a></li>
+                {{/if}}
+                <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" title="Compra"><span class="label">Compra</span></a>
+                </li>
+                <li><a href="https://www.linkedin.com/company/acniti/" class="icon fa-linkedin" title="acniti linkedin"><span class="label">linkedin</span></a>
+                <li><a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" class="icon fa-rss"
+                       target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a></li>
+            </ul>
+            <p class="copyright">&copy; {{@site.title}} LLC - todos los derechos reservados</p>
+            <p class="design">Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></p>
         </footer>
 
     </div>
