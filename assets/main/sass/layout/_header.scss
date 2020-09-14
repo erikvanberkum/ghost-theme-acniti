@@ -25,7 +25,9 @@
 		}
 
 		.icons {
-			text-align: right;
+
+            text-align: right;
+            font-size: 2.00em;
 		}
 
 		@include breakpoint('<=xlarge') {

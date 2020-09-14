@@ -7,6 +7,32 @@
 /* Footer */
 
 	#footer {
+        ul.icons {
+            cursor: default;
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                display: inline-block;
+                padding: 0 1em 0 0;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                .icon {
+                    color: inherit;
+
+                    &:before {
+                        // set the icon size.
+                        font-size: 1.25em;
+
+                    }
+                }
+            }
+        }
+
+
 		.copyright {
 			color: _palette(fg-light);
 			font-size: 0.9em;
@@ -15,4 +41,12 @@
 				color: inherit;
 			}
 		}
+        .design {
+            color: #e4f1f5;
+            font-size: 0.6em;
+
+            a {
+                color: inherit;
+            }
+        }
 	}

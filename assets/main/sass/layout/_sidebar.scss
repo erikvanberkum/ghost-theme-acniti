@@ -52,6 +52,17 @@
 			font-size: (1.25em / 0.9);
 		}
 
+        a {
+            color: _palette(accent);
+        }
+        a:link {
+            color: _palette(accent);
+        }
+        a:hover{
+          color: hotpink;
+        }
+
+
 		> .inner {
 			@include padding($pad, $pad, (0, 0, $pad, 0));
 			position: relative;

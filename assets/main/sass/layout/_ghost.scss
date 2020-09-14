@@ -10,7 +10,10 @@
     padding: 0;
     border: none;
     display: inline-flex;
-    height: 28px;
+    height: 54px;
+    border-radius: 0;
+    align-items: center;
+
 
     @include breakpoint('<=small') {
         display: flex;
@@ -20,8 +23,10 @@
 }
 
 #header .logo.image img {
-    height: 28px;
+    padding-top: 12px;
+    height: 44px;
     transform: none !important;
+    border-radius: 0;
 }
 
 @include breakpoint('<=small') {
