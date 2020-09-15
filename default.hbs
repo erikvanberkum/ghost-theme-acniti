@@ -27,12 +27,12 @@
                 {{!-- Header --}}
                 <header id="header">
                     {{#if @site.logo}}
-                        <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}"/></a>
+                        <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{t "alt logo"}}"/></a>
                     {{else}}
-                        <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
+                        <a href="{{@site.url}}" class="logo">{{t "alt logo"}}</a>
                     {{/if}}
                     <ul class="icons">
-                        <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" target="_blank" title="Buy"><span class="label">Buy</span></a>
+                        <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" target="_blank" title="{{t "buy"}}"><span class="label">{{t "buy"}}</span></a>
                         </li>
                     </ul>
                 </header>
@@ -42,7 +42,6 @@
 
             </div>
         </main>
-
 
         {{#is "post"}}
         {{!-- The left sidebar - partials/sidebar.hbs --}}
@@ -60,14 +59,11 @@
         {{/is}}
 
 
+
+
 </div>
 
-    {{!-- Theme Scripts --}}
-    <script src="https://s3.acniti.com/h2/assets/main/js/jquery.min.js"></script>
-    <script src="https://s3.acniti.com/h2/assets/main/js/browser.min.js"></script>
-    <script src="https://s3.acniti.com/h2/assets/main/js/breakpoints.min.js"></script>
-    <script src="https://s3.acniti.com/h2/assets/main/js/util.js"></script>
-    <script src="https://s3.acniti.com/h2/assets/main/js/main.js"></script>
+    {{> scripts}}
 
 
     {{!-- Ghost outputs important scripts & data with the {ghost_foot} tag
