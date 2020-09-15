@@ -2,8 +2,10 @@
 
 Ghost theme acniti is based on a modified verion of the Editorial theme, a news-oriented design built around a dynamic 'locking' sidebar (try the toggle to see it in action!) and purpose built for content-centric sites. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
 
-- **Demo of the Ghost acniti theme https://h2.acniti.com**
-- Demo original sitte: https://editorial.ghost.io
+- **Demo of the English Ghost acniti theme https://h2.acniti.com/ **
+- **Demo of the Dutch Ghost acniti theme https://h2.acniti.com/nl/ **
+- **Demo of the Spansh Ghost acniti theme https://h2.acniti.com/es/ **
+- Demo original site: https://editorial.ghost.io
 
 
 # multi language
@@ -15,6 +17,24 @@ paste the following or modify if other languages required
 
 ```
 routes:
+  /about/:
+    data: page.about
+    template: index
+  /over-ons/:
+    data: page.over-ons
+    template: index-nl
+  /sobre-nosotros/:
+    data: page.sobre-nosotros
+    template: index-es
+  /pricing/:
+    data: page.pricing
+    template: index
+  /prijzen/:
+    data: page.prijzen
+    template: index-nl
+  /precios/:
+    data: page.precios
+    template: index-es
 
 collections:
   /:
@@ -32,8 +52,8 @@ collections:
 
 taxonomies:
   tag: /tag/{slug}/
-  author: /author/{slug}/
-  
+
+ 
 ```
 
 further you need to label every post and page with a language tage which is in this case #nl, #en, #es. For Dutch, English and Spanish
@@ -66,6 +86,7 @@ We've documented our default theme pretty heavily so that it should be fairly ea
 - `index-es.hbs` - Used for the Spanish home page
 - `post.hbs` - Used for individual posts
 - `page.hbs` - Used for individual pages
+-
 - `tag.hbs` - Used for tag archives
 - `author.hbs` - Used for author archives
 
