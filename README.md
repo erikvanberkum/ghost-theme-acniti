@@ -2,9 +2,9 @@
 
 Ghost theme acniti is based on a modified verion of the Editorial theme, a news-oriented design built around a dynamic 'locking' sidebar (try the toggle to see it in action!) and purpose built for content-centric sites. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
 
-- **Demo of the English Ghost acniti theme https://h2.acniti.com/ **
-- **Demo of the Dutch Ghost acniti theme https://h2.acniti.com/nl/ **
-- **Demo of the Spansh Ghost acniti theme https://h2.acniti.com/es/ **
+- **Demo of the English Ghost acniti theme https://h2.acniti.com/**
+- **Demo of the Dutch Ghost acniti theme https://h2.acniti.com/nl/**
+- **Demo of the Spansh Ghost acniti theme https://h2.acniti.com/es/**
 - Demo original site: https://editorial.ghost.io
 
 
