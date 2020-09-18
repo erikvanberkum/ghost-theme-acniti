@@ -8,7 +8,7 @@ Ghost theme acniti is based on a modified verion of the Editorial theme, a news-
 - Demo original site: https://editorial.ghost.io
 
 
-[screenshot](https://github.com/erikvanberkum/ghost-theme-acniti/blob/master/assets/h2_acniti_front_page.jpg) 
+![screenshot](https://github.com/erikvanberkum/ghost-theme-acniti/blob/master/assets/h2_acniti_front_page_900.jpg) 
 
 # multi language
 
