@@ -44,10 +44,10 @@
                 </header>
 
                 <div class="content">
-                    <p>Voer eerst de recaptcha-check uit en schrijf vervolgens uw bericht</p>>
+                    <p>Voer eerst de recaptcha-check uit en schrijf vervolgens uw bericht</p>
                     <p>Laat ons uw vragen weten of geef u ideeën</p>
 
-                    <form class="contact-form" action="https://formspree.io/h2@acniti.com" method="post">
+                    <form class="contact-form" action="https://formspree.io/{{> secret-email}}" method="post">
                         <div class="g-recaptcha" data-sitekey="6LfW4s8ZAAAAAJM9ZLZJxLyNLygXAbelQGMo0DVY"></div>
                             <label for="full-name">Naam</label>
                             <input type="text" name="name" id="full-name" placeholder="Voor en Achternaam" required>
