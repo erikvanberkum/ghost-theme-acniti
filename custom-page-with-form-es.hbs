@@ -41,14 +41,14 @@
 
                 <header class="main content">
                     <h1>Contacto</h1>
+                    <img src="https://s3.acniti.com/acniti-h2-contact.png" alt="acniti contact">
                 </header>
 
                 <div class="content">
-                    <p>Primero haga la verificación reCAPTCHA, luego escriba su mensaje</p>
+                    <p>Haga la verificación reCAPTCHA, antes de enviar su mensaje</p>
                     <p>Háganos saber sus preguntas o darle ideas</p>
 
                     <form class="contact-form" action="https://formspree.io/{{> secret-email}}" method="post">
-                        <div class="g-recaptcha" data-sitekey="6LfW4s8ZAAAAAJM9ZLZJxLyNLygXAbelQGMo0DVY"></div>
                             <label for="full-name">Nombre</label>
                             <input type="text" name="name" id="full-name" placeholder="Nombre y Apellido" required>
                             <label for="email-address">dirección de correo electrónico</label>
@@ -56,6 +56,7 @@
                             <label for="message">Mensaje</label>
                             <textarea rows="5" name="message" id="message" placeholder="Su Mensaje" required></textarea>
                             <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                            <div class="g-recaptcha" data-sitekey="6LfW4s8ZAAAAAJM9ZLZJxLyNLygXAbelQGMo0DVY"></div>
                             <input type="submit" value="ENVIAR">
                     </form>
                 </div>
