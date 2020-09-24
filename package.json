@@ -2,14 +2,14 @@
     "name": "acniti",
     "description": "This is Acniti, a product promotion orientated theme for Ghost based on editorial.",
     "demo": "https://h2.acniti.com",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
     },
     "license": "MIT",
     "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg"
+        "desktop": "assets/h2_acniti_page_900.jpg"
     },
     "scripts": {
         "dev": "gulp",
@@ -36,6 +36,7 @@
     "keywords": [
         "ghost",
         "theme",
+        "product promotion",
         "ghost-theme"
     ],
     "repository": {
@@ -51,7 +52,7 @@
         },
         {
             "name": "erikvanberkum",
-            "email": "bubble@acniti.com",
+            "email": "h2@acniti.com",
             "url": "https://www.acniti.com"
         }
     ],
