@@ -12,6 +12,7 @@
 
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "main/css/main.css"}}"/>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
@@ -46,14 +47,15 @@
                     <p>{{t "form text"}}</p>
 
                     <form class="contact-form" action="https://formspree.io/h2@acniti.com" method="post">
-                        <label for="full-name">{{t "name"}}</label>
-                        <input type="text" name="name" id="full-name" placeholder="{{t "first and last"}}" required>
-                        <label for="email-address">{{t "email address"}}</label>
-                        <input type="email" name="_replyto" id="email-address" placeholder="{{t "your email address"}}" required>
-                        <label for="message">{{t "message"}}</label>
-                        <textarea rows="5" name="message" id="message" placeholder="{{t "your message"}}" required></textarea>
-                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-                        <input type="submit" value="{{t "submit"}}">
+                        <div class="g-recaptcha" data-sitekey="6LfW4s8ZAAAAAJM9ZLZJxLyNLygXAbelQGMo0DVY"></div>
+                            <label for="full-name">{{t "name"}}</label>
+                            <input type="text" name="name" id="full-name" placeholder="{{t "first and last"}}" required>
+                            <label for="email-address">{{t "email address"}}</label>
+                            <input type="email" name="_replyto" id="email-address" placeholder="{{t "your email address"}}" required>
+                            <label for="message">{{t "message"}}</label>
+                            <textarea rows="5" name="message" id="message" placeholder="{{t "your message"}}" required></textarea>
+                            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                            <input type="submit" value="{{t "submit"}}">
                     </form>
                 </div>
 
