@@ -37,6 +37,16 @@ routes:
   /precios/:
     data: page.precios
     template: index-es
+  /contact/:
+    data: page.contact
+    template: custom-page-with-form
+  /kontakt/:
+    data: page.kontakt
+    template: custom-page-with-form-nl
+  /contacto/:
+    data: page.contacto
+    template: custom-page-with-form-es
+
 
 collections:
   /:
@@ -54,8 +64,7 @@ collections:
 
 taxonomies:
   tag: /tag/{slug}/
-
-
+  
 ```
 
 further you need to label every post and page with a language tag which is in this case #nl, #en, #es. For Dutch, English and Spanish
