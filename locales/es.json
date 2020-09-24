@@ -1,4 +1,13 @@
 {
     "buy": "compra nuestra productos",
-    "alt logo": "acniti tomar hidrógeno"
+    "alt logo": "acniti tomar hidrógeno",
+    "contact": "Contacto",
+    "form text": "Háganos saber sus preguntas o darle ideas",
+    "name": "Name",
+    "first and last":  "First and Last",
+    "email address":  "Email Address",
+    "your email address": "Your Email Address",
+    "message": "Message",
+    "your message": "Your Message",
+    "submit": "SUBMIT"
 }

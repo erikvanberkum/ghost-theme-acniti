@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "main/css/main.css"}}"/>
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+
+<body class="is-preload {{body_class}}">
+
+<div id="wrapper">
+    <main id="main">
+        <div class="inner">
+
+            {{!-- Header --}}
+            <header id="header">
+                {{#if @site.logo}}
+                    <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="acniti tomar hidrógeno"/></a>
+                {{else}}
+                    <a href="{{@site.url}}" class="logo">acniti tomar hidrógeno</a>
+                {{/if}}
+                <ul class="icons">
+                    <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" target="_blank"
+                           title="compra nuestra productos"><span class="label">compra nuestra productos</span></a></li>
+                </ul>
+            </header>
+            <section>
+
+                <header class="main content">
+                    <h1>Contacto</h1>
+                </header>
+
+                <div class="content">
+                    <p>Háganos saber sus preguntas o darle ideas</p>
+
+                    <form class="contact-form" action="https://formspree.io/h2@acniti.com" method="post">
+                        <label for="full-name">Nombre</label>
+                        <input type="text" name="name" id="full-name" placeholder="Nombre y Apellido" required>
+                        <label for="email-address">dirección de correo electrónico</label>
+                        <input type="email" name="_replyto" id="email-address" placeholder="Tu correo electrónico" required>
+                        <label for="message">Mensaje</label>
+                        <textarea rows="5" name="message" id="message" placeholder="{{t "Su Mensaje"}}" required></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                        <input type="submit" value="ENVIAR">
+                    </form>
+                </div>
+
+
+            </section>
+        </div>
+    </main>
+    {{> sidebar-es}}
+</div>
+{{!--load java script--}}
+{{> scripts}}
+{{!-- Ghost outputs important scripts & data with the {ghost_foot} tag
+it should always be the very last thing before the closing body tag --}}
+{{ghost_foot}}
+
+</body>
+
+</html>
+
+
+
+
+
+

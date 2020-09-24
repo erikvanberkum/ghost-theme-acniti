@@ -1,4 +1,13 @@
 {
     "buy": "koop onze producten",
-    "alt logo": "acniti drink waterstof"
+    "alt logo": "acniti drink waterstof",
+    "contact": "Contact",
+    "form text": "Laat ons uw vragen weten of geef u ideeën",
+    "name": "Naam",
+    "first and last":  "Voor en Achternaam",
+    "email address":  "Email Adres",
+    "your email address": "Jou Email Adres",
+    "message": "Bericht",
+    "your message": "Jou Bericht",
+    "submit": "VERZENDEN"
 }

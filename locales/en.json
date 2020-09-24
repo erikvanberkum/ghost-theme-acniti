@@ -1,4 +1,14 @@
 {
     "buy": "Buy our products",
-    "alt logo": "acniti drink hydrogen"
+    "alt logo": "acniti drink hydrogen",
+    "contact": "Contact",
+    "form text": "Let us know your questions or give your ideas",
+    "name": "Name",
+    "first and last":  "First and Last",
+    "email address":  "Email Address",
+    "your email address": "Your Email Address",
+    "message": "Message",
+    "your message": "Your Message",
+    "submit": "SUBMIT"
+
 }

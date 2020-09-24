@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "main/css/main.css"}}"/>
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+
+<body class="is-preload {{body_class}}">
+
+<div id="wrapper">
+    <main id="main">
+        <div class="inner">
+
+            {{!-- Header --}}
+            <header id="header">
+                {{#if @site.logo}}
+                    <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="acniti drink waterstof"/></a>
+                {{else}}
+                    <a href="{{@site.url}}" class="logo">acniti drink waterstof</a>
+                {{/if}}
+                <ul class="icons">
+                    <li><a href="https://shop.acniti.com" class="icon fa-shopping-cart" target="_blank"
+                           title="Koop onze producten"><span class="label">Koop onze producten</span></a></li>
+                </ul>
+            </header>
+            <section>
+
+                <header class="main content">
+                    <h1>Contact</h1>
+                </header>
+
+                <div class="content">
+                    <p>Laat ons uw vragen weten of geef u ideeën</p>
+
+                    <form class="contact-form" action="https://formspree.io/h2@acniti.com" method="post">
+                        <label for="full-name">Naam</label>
+                        <input type="text" name="name" id="full-name" placeholder="Voor en Achternaam" required>
+                        <label for="email-address">Email adres</label>
+                        <input type="email" name="_replyto" id="email-address" placeholder="Jouw Emailadres" required>
+                        <label for="message">Bericht</label>
+                        <textarea rows="5" name="message" id="message" placeholder="Jouw Bericht" required></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                        <input type="submit" value="VERZENDEN">
+                    </form>
+                </div>
+
+
+            </section>
+        </div>
+    </main>
+    {{> sidebar-nl}}
+</div>
+{{!--load java script--}}
+{{> scripts}}
+{{!-- Ghost outputs important scripts & data with the {ghost_foot} tag
+it should always be the very last thing before the closing body tag --}}
+{{ghost_foot}}
+
+</body>
+
+</html>
+
+
+
+
+
+
