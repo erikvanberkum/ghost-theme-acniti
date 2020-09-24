@@ -1,12 +1,14 @@
 # ghost theme acniti
 
-Ghost theme acniti is based on a modified verion of the Editorial theme, a news-oriented design built around a dynamic 'locking' sidebar (try the toggle to see it in action!) and purpose built for content-centric sites. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
+Ghost theme acniti is based on a modified version of the Editorial theme, a news-oriented design built around a dynamic 'locking' sidebar (try the toggle to see it in action!) and purpose built for content-centric sites. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
 
-- **Demo of the English Ghost acniti theme https://h2.acniti.com/ **
-- **Demo of the Dutch Ghost acniti theme https://h2.acniti.com/nl/ **
-- **Demo of the Spansh Ghost acniti theme https://h2.acniti.com/es/ **
+- **Demo of the English Ghost acniti theme https://h2.acniti.com/**
+- **Demo of the Dutch Ghost acniti theme https://h2.acniti.com/nl/**
+- **Demo of the Spanish Ghost acniti theme https://h2.acniti.com/es/**
 - Demo original site: https://editorial.ghost.io
 
+
+![screenshot](https://github.com/erikvanberkum/ghost-theme-acniti/blob/master/assets/h2_acniti_front_page_900.jpg)
 
 # multi language
 
@@ -53,10 +55,10 @@ collections:
 taxonomies:
   tag: /tag/{slug}/
 
- 
+
 ```
 
-further you need to label every post and page with a language tage which is in this case #nl, #en, #es. For Dutch, English and Spanish
+further you need to label every post and page with a language tag which is in this case #nl, #en, #es. For Dutch, English and Spanish
 
 for more detailed instructions read the following tutorial:
 https://ghost.org/tutorials/multi-language-content/
@@ -86,9 +88,11 @@ We've documented our default theme pretty heavily so that it should be fairly ea
 - `index-es.hbs` - Used for the Spanish home page
 - `post.hbs` - Used for individual posts
 - `page.hbs` - Used for individual pages
--
 - `tag.hbs` - Used for tag archives
-- `author.hbs` - Used for author archives
+- `author.hbs` - Not enabled in this ghost theme
+
+Directory partials for repetitive code
+Directory locales for theme translations
 
 One neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
 
