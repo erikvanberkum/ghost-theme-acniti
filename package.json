@@ -1,8 +1,8 @@
 {
     "name": "acniti",
-    "description": "This is Acniti, a product promotion orientated theme for Ghost based on editorial.",
+    "description": "This is Acniti, a product promotion orientated theme for Ghost based on editorial. Compatible with Ghost 5.49.1",
     "demo": "https://h2.acniti.com",
-    "version": "3.0.2",
+    "version": "3.0.3",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
